@@ -159,10 +159,10 @@ start_time = time.time()
 
 
 mydb = mysql.connector.connect(
-    host=""#host,
-    user=""#user,
-    password=""#password,
-    database=""#Database,
+    host="",#host
+    user="",#user
+    password="",#password
+    database="",#Database
     port=3306
 )
 
