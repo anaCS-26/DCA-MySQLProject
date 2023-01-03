@@ -20,7 +20,7 @@ def getMatchOvers(matchType, matchGrade):
     else:
         return 20
 
-def creatMatchInnings(team, inning, pandasTable):
+def createMatchInnings(team, inning, pandasTable):
     try:
         batting_count = 1
         for player in pandas[pandasTable].itertuples():
@@ -424,8 +424,8 @@ for row in tqdm(mainPage[0].itertuples(), total=len(mainPage[0].index), desc="Li
     else:
         secondTeam = Team1
 
-    creatMatchInnings(firstTeam, 1, 1)
-    creatMatchInnings(secondTeam, 2, 4)
+    createMatchInnings(firstTeam, 1, 1)
+    createMatchInnings(secondTeam, 2, 4)
 
     createMatchFOW(1, 2)
     createMatchFOW(2, 5)
@@ -504,6 +504,7 @@ print()
 print("------------------SQL Data Upload Complete------------------")
 
 cur.close()
+mydb.close()
 
 #print minutes and seconds it took to run the script
 print("------Script completed in " + str(int((time.time() - start_time)/60)) + " : " + str(round((time.time() - start_time)%60, 2)) + " seconds------ ")
