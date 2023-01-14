@@ -274,7 +274,8 @@ for row in tqdm(mainPage[0].itertuples(), total=len(mainPage[0].index), desc="Li
         winner = "Incomplete"
         loser = "Incomplete"
     else:
-        winner = row.Winner.split(' ')[0:2]
+        winnerIndex = row.Winner.split(' ').index("Win")
+        winner = row.Winner.split(' ')[0:winnerIndex]
         winner = ' '.join(winner)
 
     if(Team1 == winner):
