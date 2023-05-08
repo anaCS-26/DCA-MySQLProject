@@ -7,7 +7,6 @@ from tqdm import tqdm
 import os
 
 os.system("cls")
-#hello
 
 # Gets the number of overs based on match type and grade
 def getMatchOvers(matchType, matchGrade):
